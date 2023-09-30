@@ -10,5 +10,3 @@ export function init(element: HTMLElement) {
     </React.StrictMode>
   )
 }
-
-init(document.getElementById("root")!)
