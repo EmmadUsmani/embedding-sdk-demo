@@ -1,5 +1,3 @@
-document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
-  <div>
-    Some demo app
-  </div>
-`
+import { init } from "core"
+
+init(document.querySelector<HTMLDivElement>("#app")!)
