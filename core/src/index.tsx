@@ -1,12 +1,7 @@
-import React from "react"
-import ReactDOM from "react-dom/client"
+import { render } from "preact"
 
 import { App } from "./App.tsx"
 
 export function init(element: HTMLElement) {
-  ReactDOM.createRoot(element).render(
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  )
+  render(<App />, element)
 }
