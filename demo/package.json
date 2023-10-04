@@ -5,8 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "clean": "rm -rf dist node_modules",
+    "build": "pnpm clean && pnpm i && tsc && vite build",
+    "preview": "vite preview",
+    "bundle-viz": "npx vite-bundle-visualizer"
   },
   "devDependencies": {
     "typescript": "^5.0.2",
