@@ -5,7 +5,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -rf node_modules",
-    "build": "pnpm clean && pnpm --filter core build && pnpm --filter demo build"
+    "build": "pnpm clean && pnpm --filter core build && pnpm --filter demo build",
+    "dev": "pnpm --filter demo dev",
+    "bundle-viz": "pnpm --filter demo bundle-viz"
   },
   "keywords": [],
   "author": ""
