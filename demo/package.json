@@ -5,7 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+<<<<<<< HEAD
     "build": "tsc && vite build",
+=======
+    "clean": "rm -rf dist node_modules",
+    "build": "pnpm clean && pnpm i && tsc && vite build",
+>>>>>>> 63673ac (add more scripts)
     "preview": "vite preview"
   },
   "devDependencies": {
