@@ -1,3 +1,4 @@
+import { useState } from "react"
 import { Group } from "@visx/group"
 import { Bar } from "@visx/shape"
 
@@ -20,6 +21,8 @@ const DATA = [
 ]
 
 export function App() {
+  const [hoveredBar, setHoveredBar] = useState<number | null>(null)
+
   return (
     <svg width={1000} height={500}>
       <Group>
@@ -34,7 +37,9 @@ export function App() {
               y={y}
               width={50}
               height={height}
-              fill={color}
+              fill={index === hoveredBar ? "pink" : color}
+              onMouseEnter={() => setHoveredBar(index)}
+              onMouseLeave={() => setHoveredBar(null)}
             />
           )
         })}
