@@ -2,6 +2,7 @@ import { resolve } from "path"
 import { defineConfig } from "vite"
 import react from "@vitejs/plugin-react"
 import dts from "vite-plugin-dts"
+import { externalizeDeps } from "vite-plugin-externalize-deps"
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -13,5 +14,5 @@ export default defineConfig({
       fileName: "core",
     },
   },
-  plugins: [dts(), react()],
+  plugins: [dts(), react(), externalizeDeps()],
 })
